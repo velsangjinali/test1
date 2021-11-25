@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Velsan Gjinali Resume</title>
+	<style>
+		html {
+			-webkit-print-color-adjust: exact;
+			background: #464646;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		body *{
+			display:flex;
+			flex-direction:column;
+		}
+
+		html,
+		body {
+			font-size: 14px;
+			margin: 0;
+			padding: 0 1rem;
+			page-break-inside: auto;
+		}
+
+		@media only screen {
+			body {
+				margin: 0 auto;
+				max-width: 900px;
+				color: hsl(200deg 18% 25%);
+			}
+		}
+
+		body {
+			line-height: 1.5;
+			background: white;
+			position:relative;
+		}
+
+		a,
+		a.visited {
+			color: #1565c0;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 1rem;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+    		color: #1565c0;
+		}
+
+		.header {    
+			margin: 1rem -1rem 0 -1rem;
+			width: calc(100% + 2rem);
+			background: #25262A;
+			padding: 2rem;
+			color: #eceff1;
+			border-radius: 1rem;
+			position:relative;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 0;    
+			color: #1e8ffe;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		.header h2 {
+			color: #90a4ae;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.column-list {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+		}
+
+		.column {
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: baseline;
+			line-height: 1;
+		}
+
+		.column p{
+			margin: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+			flex-direction: row;
+		}
+
+		ul {
+			padding-inline-start: 0;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		.bulleted-list{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			page-break-before:always;
+		}
+
+		.bulleted-list li, .bulleted-list li *{
+			display: inline;
+			page-break-before:always;
+		}
+
+		.bulleted-list li {
+			padding: 0.5rem 1rem;
+			width: calc(50% - 0.5rem);
+			border: 1px solid #ddd;
+			background: #f5f5f5;
+			margin-right: 0.5rem;
+			align-items: center;
+			vertical-align: baseline;
+			justify-content: center;
+			margin-bottom: 0.5rem;
+			border-radius: 0.5rem;
+			page-break-before: always;
+		}
+
+		.contacts {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.contacts li{
+			width:34%;
+		}
+
+		.summary {
+			display:inline-block !important;
+			margin-top:1rem;
+		}
+
+		.summary *{
+			display:inline-block !important;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+		.techs *{
+			display: inline;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.logo-holder {
+			width: 180px;
+			position:absolute;
+			top:2rem;
+			right:2rem;
+			font-size:0.7rem;
+			text-align: center;
+
+					}
+
+		.logo-holder  img{
+			width: 80%;
+			margin: auto;
+			margin-bottom:0.5rem;
+		}
+
+		.logo-holder  span, .logo-holder span * {
+			display: inline;
+		}
+	</style>
+</head>
+
+<body>
+	<article class="page sans">
+		<div class="page-body">
+			<div class="header">
+				<h1>Velsan Gjinali</h1>
+				<ul class="contacts">
+					<li><strong style="margin-right:5px;">Location:</strong><span>Prizren - Kosovo</span></li>
+					<li><strong style="margin-right:5px;">Mail:</strong><span>velsangjinali@gmail.com</span></li>
+					<li><strong style="margin-right:5px;">Phone:</strong><span>+383 xxx-xxx</span></li>
+					<li><strong style="margin-right:5px;">Github:</strong><span>@velsangjinali</span></li>
+				</ul>
+				<div class="logo-holder">
+					<img src="./logo.png" alt="">
+					<span>This resume is prepared  <br> for <strong>Company Name</strong></span>
+				</div>
+				<p class="summary"><span>“</span>Hello, I'm Velsan. I am from Prizren, I am graduate of the South East European University in Tetovo - Computer Science. I have been a developer in front end about 7 years. I am primarily experienced in Front-End Development, but I can also manage some application development steps, from configuring databases to designing buttons. I feel comfortable developing applications WordPress platform. I speak Albanian , English and Turkish language.<span>”</span></p>	
+			</div>
+			<h2>Experiences</h2>
+			<hr/>
+			<div class="column-list">
+				<div class="column">
+					<h3>Pollster </h3>
+					<p>Apr 2008 - Mar 2010</p>
+				</div>
+				<div class="column">
+					<p>Strategic Research</p>
+					<p>Prishtina</p>
+				</div>
+			</div>
+			<p>The purpose of strategic research is to look at the market associated with a particular good or service to ascertain how the audience will receive it. This can include information gathering for the purpose of market segmentation and product differentiation, which can be used to tailor advertising efforts or determine which features are seen as a priority to the consumer.
+				Consists of a combination of primary information, or what has been gathered by the company or by a person hired by the company, and secondary information, or what has been gathered by an outside source.
+				Primary information is the data that the company has collected directly or that has been collected by a person or business hired to conduct the research. This type of information generally falls into two categories: exploratory and specific research.
+				</p>
+			
+			<div class="column-list" style="page-break-before:always">
+				<div class="column">
+					<h3>Assistant Coordinator</h3>
+					<p>Aug 2010 - Aug 2013</p>
+				</div>
+				<div class="column">
+					<p>Dokufest</p>
+					<p>Prizren</p>
+				</div>
+			</div>
+			<p>DokuFest, International Documentary and Short Film Festival, is the largest film festival in Kosovo. Each year the festival fills the cinemas and improvised screening venues around historic city center of Prizren with a selection of more than 200 hand picked films from around the world. Documentary photo exhibitions, debates, master classes and lively music events are also part of the 9 days of the festival. In addition to the Festival, the organization is involved in several projects, varying from establishment of cinema clubs in high schools and documentary production in human rights field, travelling cinema to villages in Prizren region, to cinema management (to start in October 2013).
+			</p>
+			
+			<div class="column-list" style="page-break-before:always">
+				<div class="column">
+					<h3>Coordinator of Cinema</h3>
+					<p>Aug 2013 - Aug 2016</p>
+				</div>
+				<div class="column">
+					<p>Dokufest</p>
+					<p>Prizren</p>
+				</div>
+			</div>
+			<p>DokuFest, International Documentary and Short Film Festival, is the largest film festival in Kosovo. Each year the festival fills the cinemas and improvised screening venues around historic city center of Prizren with a selection of more than 200 hand picked films from around the world. Documentary photo exhibitions, debates, master classes and lively music events are also part of the 9 days of the festival. In addition to the Festival, the organization is involved in several projects, varying from establishment of cinema clubs in high schools and documentary production in human rights field, travelling cinema to villages in Prizren region, to cinema management (to start in October 2013).</p>
+			
+			<div class="column-list" style="page-break-before:always">
+				<div class="column">
+					<h3>Web Developer</h3>
+					<p>Jun 2014 - Oct 2016</p>
+				</div>
+				<div class="column">
+					<p>Public Communication LLC</p>
+					<p>Prishtina</p>
+				</div>
+			</div>
+			<p>Public Communication is a web development company. Specialized on web design and development, web applications, ERPs, CRMs, e-commerce solutions, business-to-business applications, business-to-client applications.</p>
+			<ul class="bulleted-list">
+				<li style="list-style-type:disc">
+					<strong>EXDC Project - <a href="www.exdc-ks.com  /">www.exdc-ks.com  </a></strong> 
+					<br>Role: <span>Front-End Developer</span>
+					<br>Team: 3 Developers, 2 months.
+					<br>Tech: <strong>Html,Css,JavaScript,WordPress</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>KRGS Project - <a href="www.krg-ks.com">www.krg-ks.com </a></strong> 
+					<br>Role: <span>Front-End Developer</span>
+					<br>Team: 3 Developers, 2 months.
+					<br>Tech: <strong>Html,Css,JavaScript,WordPress</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>KGS CENTER - <a href="www.kgscenter.net ">www.kgscenter.net </a></strong> 
+					<br>Role: <span>Front-End Developer</span>
+					<br>Team: 3 Developers, 2 months.
+					<br>Tech: <strong>Html,Css,JavaScript,WordPress</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>Pirro - <a href="www.pirro-ks.com ">www.pirro-ks.com </a></strong> 
+					<br>Role: <span>Front-End Developer</span>
+					<br>Team: 3 Developers, 2 months.
+					<br>Tech: <strong>Html,Css,JavaScript,WordPress</strong>
+				</li>
+			</ul>
+
+			<div class="column-list" style="page-break-before:always">
+				<div class="column">
+					<h3>Editor</h3>
+					<p>Nov 2013 - Feb 2019</p>
+				</div>
+				<div class="column">
+					<p>Borozani</p>
+					<p>Prizren</p>
+				</div>
+			</div>
+			<p>Borozani.com (currently TopSporti.com) is an online national and international sports news website founded in 2013 from Kosovo, who is dedicated especially about sport and albanian athletes around the world.</p>
+			
+			<div class="column-list" style="page-break-before:always">
+				<div class="column">
+					<h3>Coordinator</h3>
+					<p>Jun 2010 - Still </p>
+				</div>
+				<div class="column">
+					<p>Bunarfest</p>
+					<p>Prizren</p>
+				</div>
+			</div>
+			<p>Bunarfest is a traditional festival, which organised by NGO X40 since 2006, in Prizren, Kosovo. The main activity of the festival is the race on the river with tractor's tubes. The message of the Bunarfest is environmental protection with through cleaning the river before the race. The race hasn't competing character and it's organised just for fun. Music events, workshops and different performances, are other activities included in Bunarfest.</p>
+			<ul class="bulleted-list">
+				<li style="list-style-type:disc">
+					<strong>NGO X40 -  Bunarfest Festival 10 Edition </strong> 
+					<br>Awards: <span>for the contribution given to the realization of the 10’th edition of the Bunarfest Festival</span>
+					<br>Location: Prizren - Kosovo
+					<br>Year: <strong>2014</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>NGO X40 – Bunarfest Festival 2018 </strong> 
+					<br>Awards: <span> Municipality of Prizren For Environmental Contribution</span>
+					<br>Location: Prizren - Kosovo
+					<br>Year: <strong>2018</strong>
+				</li>
+			</ul>
+			<div style="page-break-before:always">&nbsp;</div> 
+			
+			<h2 style="margin-top:2rem">Freelance Projects</h2>
+			<hr/>
+
+			<ul class="bulleted-list">
+				<li style="list-style-type:disc">
+					<strong>TourGuide - <a href="://play.google.com/store/apps/details?id=org.TourGuide&hl=en">TourGuide - PlayStore </a></strong> 
+					<br>Role: <span>Administrator</span>
+					<br>Team: 3 Developers, 5 months.
+					<br>Tech: <strong>Html,Css,JavaScript</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>Bunarfest <a href="www.bunarfest.com">www.bunarfest.com </a></strong> 
+					<br>Role: <span>Front-End Developer</span>
+					<br>Team: 2 Developers, 2 months.
+					<br>Tech: <strong>Html,Css,JavaScript,WordPress</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>Vali Gjinali <a href="www.valigjinali.com">www.valigjinali.com </a></strong> 
+					<br>Role: <span>Wordpress - Frond-End</span>
+					<br>Team: 1 Developer, 2 months.
+					<br>Tech: <strong>Html,Css,JavaScript,WordPress</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>AutotradeSystem - <a href="www.autotradesystems.org">www.autotradesystems.org </a></strong> 
+					<br>Role: <span>Front-End Developer</span>
+					<br>Team: 2 Developers, 2 months.
+					<br>Tech: <strong>Html,Css,JavaScript,WordPress</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>Isolid <a href="www.isolid.ch">www.isolid.ch </a></strong> 
+					<br>Role: <span>Wordpress - Frond-End</span>
+					<br>Team: 2 Developers, 2 months.
+					<br>Tech: <strong>Html,Css,JavaScript,WordPress</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>Wallens - <a href="www.wallens.nu">www.wallens.nu</a></strong> 
+					<br>Role: <span>Front-End Developer</span>
+					<br>Team: 1 Developer, 2 months.
+					<br>Tech: <strong>Html,Css,JavaScript,WordPress</strong>
+				</li>
+			</ul>
+
+			<h2>Technical Skills</h2>
+			<hr/>
+			<ul class="techs">
+				<li><strong>Languages:</strong> <span>HTML/CSS, Sass, Less ,TypeScript, JavaScript, Php</span></li>
+				<li><strong>Frameworks & Libraries:</strong> <span>.AngularJS, React, VueJs, Bootstrap, Tailwand</span></li>
+				<li><strong>Developer Tools:</strong> <span>Git, Photoshop, Figma, VS Code, Visual Studio</span></li>
+				<li><strong>Other:</strong> <span>Jira, Agile Methodologies, WordPress</span></li>
+			</p>
+		</div>
+	</article>
+</body>
+
+</html>
